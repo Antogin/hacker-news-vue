@@ -8,17 +8,17 @@
               <div class="tags has-addons">
                 <a
                   class="tag is-link"
-                  href="https://github.com/BulmaTemplates/bulma-templates"
-                  >Bulma Templates</a
+                  href="https://github.com/Antogin"
+                  >Git</a
                 >
-                <span class="tag is-light">Daniel Supernault</span>
+                <span class="tag is-light">Antogin</span>
               </div>
             </div>
             <div class="control">
               <div class="tags has-addons">
-                <a class="tag is-link">The source code is licensed</a>
-                <span class="tag is-light"
-                  >MIT &nbsp;<i class="fa fa-github"></i
+                <a class="tag is-link">The source code is coming</a>
+                <span class="tag is-light">
+                  🖕&nbsp;<i class="fa fa-github"></i
                 ></span>
               </div>
             </div>

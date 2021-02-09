@@ -1,11 +1,7 @@
 <template>
-
-  <Navbar/>
- 
- 
+  <Navbar />
   <router-view />
-  
-  <Footer/>
+  <Footer />
 </template>
 
 <style lang="scss">
@@ -13,13 +9,13 @@
 </style>
 
 <script>
-import NavbarVue from './components/Navbar.vue'
-import FooterVue from './components/Footer.vue'
+import NavbarVue from "./components/Navbar.vue";
+import FooterVue from "./components/Footer.vue";
 
 export default {
-   components: {
-    'Navbar': NavbarVue,
-    'Footer': FooterVue
-  }
-}
+  components: {
+    Navbar: NavbarVue,
+    Footer: FooterVue,
+  },
+};
 </script>
