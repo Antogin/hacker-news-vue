@@ -3,5 +3,5 @@ export const getTop = () => {
 }
 
 export const getItem = (id) => {
-    return fetch(`http://hn.algolia.com/api/v1/items/${id}`)
+    return fetch(`https://hn.algolia.com/api/v1/items/${id}`)
 }
