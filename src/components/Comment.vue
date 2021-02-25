@@ -89,18 +89,18 @@ export default {
   name: "Comment",
 
   props: ["comment"],
-  data: function () {
+  data: function() {
     return {
-      collapse: false,
+      collapse: false
     };
   },
   methods: {
-    strip: function (value) {
+    strip: function(value) {
       const div = document.createElement("div");
       div.innerHTML = value;
       const text = div.textContent || div.innerText || "";
       return text;
-    },
-  },
+    }
+  }
 };
 </script>

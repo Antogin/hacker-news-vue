@@ -36,27 +36,57 @@
         </div>
       </div>
     </div>
+
+    <Pagination
+      :currentPage="pages.current"
+      :total="pages.nbPages"
+      :callback="getTop"
+    />
   </section>
 </template>
 
 <script>
 import { getTop } from "./../api/algolia";
+import Pagination from "./../components/Pagination";
 export default {
   name: "Home",
-  components: {},
-  data: function () {
+  components: {
+    Pagination: Pagination
+  },
+  data: function() {
     return {
       items: [],
+      pages: {
+        current: 0,
+        nbPages: 0
+      }
     };
   },
-  mounted: function () {
+  methods: {
+    getTop: function(page) {
+      getTop(page)
+        .then(data => {
+          this.items = data.hits;
+          this.pages = {
+            nbPages: data.nbPages,
+            current: page
+          };
+          console.log(data);
+        })
+        .catch();
+    }
+  },
+  mounted: function() {
     getTop()
-      .then((d) => d.json())
-      .then((data) => {
+      .then(data => {
         this.items = data.hits;
-        console.log(data.hits[0]);
+        this.pages = {
+          nbPages: data.nbPages,
+          current: 0
+        };
+        console.log(data);
       })
       .catch();
-  },
+  }
 };
 </script>

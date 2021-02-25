@@ -6,11 +6,7 @@
           <div class="field is-grouped is-grouped-multiline">
             <div class="control">
               <div class="tags has-addons">
-                <a
-                  class="tag is-link"
-                  href="https://github.com/Antogin"
-                  >Git</a
-                >
+                <a class="tag is-link" href="https://github.com/Antogin">Git</a>
                 <span class="tag is-light">Antogin</span>
               </div>
             </div>

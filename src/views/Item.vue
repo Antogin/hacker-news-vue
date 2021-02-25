@@ -20,29 +20,28 @@
   </section>
 </template>
 
-
 <script>
 import { getItem } from "./../api/algolia";
 import CommentVue from "./../components/Comment";
 
 export default {
   components: {
-    Comment: CommentVue,
+    Comment: CommentVue
   },
 
-  data: function () {
+  data: function() {
     return {
-      item: null,
+      item: null
     };
   },
-  mounted: function () {
+  mounted: function() {
     getItem(this.$route.params.id)
-      .then((r) => r.json())
-      .then((data) => {
+      .then(r => r.json())
+      .then(data => {
         console.log(data);
         this.item = data;
       })
       .catch();
-  },
+  }
 };
 </script>

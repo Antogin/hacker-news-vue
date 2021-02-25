@@ -15,7 +15,7 @@ import FooterVue from "./components/Footer.vue";
 export default {
   components: {
     Navbar: NavbarVue,
-    Footer: FooterVue,
-  },
+    Footer: FooterVue
+  }
 };
 </script>
