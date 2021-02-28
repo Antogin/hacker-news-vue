@@ -50,13 +50,13 @@
 export default {
   data() {
     return {
-      active: false,
+      active: false
     };
   },
   methods: {
-    toggle: function () {
+    toggle: function() {
       this.active = !this.active;
-    },
-  },
+    }
+  }
 };
 </script>
