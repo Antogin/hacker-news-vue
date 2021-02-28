@@ -21,7 +21,7 @@ export const getShow = (page = 0) => {
   const yesterday = subDays(now, 1);
 
   return fetch(
-    `http://hn.algolia.com/api/v1/search?tags=show_hn&page=${page}&numericFilters=created_at_i>${getUnixTime(
+    `https://hn.algolia.com/api/v1/search?tags=show_hn&page=${page}&numericFilters=created_at_i>${getUnixTime(
       yesterday
     )},created_at_i<${getUnixTime(now)}`
   ).then(d => d.json());
