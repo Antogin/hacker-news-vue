@@ -2,14 +2,14 @@
   <nav class="navbar is-white topNav">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="../">
+        <router-link class="navbar-item" @click="toggle" to="/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
             width="28"
             height="28"
           />
           Hacker News
-        </a>
+        </router-link>
         <div class="navbar-burger burger" @click="toggle" data-target="topNav">
           <span></span>
           <span></span>
@@ -18,9 +18,12 @@
       </div>
       <div id="topNav" class="navbar-menu" :class="active ? 'is-active' : null">
         <div class="navbar-start">
-          <router-link class="navbar-item" to="/"> News </router-link>
-          <router-link class="navbar-item" to="/show">Show</router-link>
-          <router-link class="navbar-item" to="/search"> Search</router-link>
+          <router-link class="navbar-item" @click="toggle" to="/show"
+            >Show</router-link
+          >
+          <router-link class="navbar-item" @click="toggle" to="/search">
+            Search</router-link
+          >
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
