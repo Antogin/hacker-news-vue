@@ -55,50 +55,50 @@ import formatDistance from "date-fns/formatDistance";
 export default {
   name: "Home",
   components: {
-    Pagination: Pagination,
+    Pagination: Pagination
   },
-  data: function () {
+  data: function() {
     return {
       items: [],
       pages: {
         current: 0,
-        nbPages: 0,
-      },
+        nbPages: 0
+      }
     };
   },
   methods: {
-    getShow: function (page) {
+    getShow: function(page) {
       getShow(page)
-        .then((data) => {
-          this.items = data.hits.map((hit) => {
+        .then(data => {
+          this.items = data.hits.map(hit => {
             return {
               ...hit,
-              createdAt: formatDistance(new Date(), new Date(hit.created_at)),
+              createdAt: formatDistance(new Date(), new Date(hit.created_at))
             };
           });
           this.pages = {
             nbPages: data.nbPages,
-            current: page,
+            current: page
           };
         })
         .catch();
-    },
+    }
   },
-  mounted: function () {
+  mounted: function() {
     getShow()
-      .then((data) => {
-        this.items = data.hits.map((hit) => {
+      .then(data => {
+        this.items = data.hits.map(hit => {
           return {
             ...hit,
-            createdAt: formatDistance(new Date(), new Date(hit.created_at)),
+            createdAt: formatDistance(new Date(), new Date(hit.created_at))
           };
         });
         this.pages = {
           nbPages: data.nbPages,
-          current: 0,
+          current: 0
         };
       })
       .catch();
-  },
+  }
 };
 </script>
