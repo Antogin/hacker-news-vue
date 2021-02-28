@@ -3,7 +3,12 @@
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="../">
-          <!-- <img src="" width="112" height="28"> -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
+            width="28"
+            height="28"
+          />
+          Hacker News
         </a>
         <div class="navbar-burger burger" @click="toggle" data-target="topNav">
           <span></span>
