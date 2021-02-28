@@ -13,11 +13,9 @@
       </div>
       <div id="topNav" class="navbar-menu">
         <div class="navbar-start">
-          <router-link class="navbar-item" to="/"> New </router-link>
-          <router-link class="navbar-item" to="/search"> Search</router-link>
-          <router-link class="navbar-item" to="/ask">Ask</router-link>
+          <router-link class="navbar-item" to="/"> News </router-link>
           <router-link class="navbar-item" to="/show">Show</router-link>
-          <router-link class="navbar-item" to="/jobs">Jobs</router-link>
+          <router-link class="navbar-item" to="/search"> Search</router-link>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">

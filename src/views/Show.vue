@@ -42,58 +42,63 @@
     <Pagination
       :currentPage="pages.current"
       :total="pages.nbPages"
-      :callback="getTop"
+      :callback="getShow"
     />
   </section>
 </template>
 
 <script>
-import { getTop } from "./../api/algolia";
+import { getShow } from "./../api/algolia";
 import Pagination from "./../components/Pagination";
 import formatDistance from "date-fns/formatDistance";
 
 export default {
   name: "Home",
   components: {
-    Pagination: Pagination
+    Pagination: Pagination,
   },
-  data: function() {
+  data: function () {
     return {
       items: [],
       pages: {
         current: 0,
-        nbPages: 0
-      }
+        nbPages: 0,
+      },
     };
   },
   methods: {
-    getTop: function(page) {
-      getTop(page)
-        .then(data => {
-          this.items = data.hits;
+    getShow: function (page) {
+      getShow(page)
+        .then((data) => {
+          this.items = data.hits.map((hit) => {
+            return {
+              ...hit,
+              createdAt: formatDistance(new Date(), new Date(hit.created_at)),
+            };
+          });
           this.pages = {
             nbPages: data.nbPages,
-            current: page
+            current: page,
           };
         })
         .catch();
-    }
+    },
   },
-  mounted: function() {
-    getTop()
-      .then(data => {
-        this.items = data.hits.map(hit => {
+  mounted: function () {
+    getShow()
+      .then((data) => {
+        this.items = data.hits.map((hit) => {
           return {
             ...hit,
-            createdAt: formatDistance(new Date(), new Date(hit.created_at))
+            createdAt: formatDistance(new Date(), new Date(hit.created_at)),
           };
         });
         this.pages = {
           nbPages: data.nbPages,
-          current: 0
+          current: 0,
         };
       })
       .catch();
-  }
+  },
 };
 </script>
