@@ -21,28 +21,32 @@ export default {
   props: {
     currentPage: Number,
     total: Number,
-    callback: Function
+    callback: Function,
   },
   methods: {
-    nextPage: function() {
+    nextPage: function () {
       this.callback(this.currentPage + 1);
     },
-    previousPage: function() {
+    previousPage: function () {
       this.callback(this.currentPage - 1);
     },
-    setPage: function(n) {
+    setPage: function (n) {
       this.callback(n);
-    }
+    },
+    openNav: function () {
+
+
+    },
   },
   data() {
     return {
-      fsdsfd: [1, 2, 3]
+      fsdsfd: [1, 2, 3],
     };
   },
   computed: {
-    pages: function() {
+    pages: function () {
       return this.total ? nArray(this.total) : [];
-    }
-  }
+    },
+  },
 };
 </script>
