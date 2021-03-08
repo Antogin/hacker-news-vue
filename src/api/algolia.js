@@ -26,3 +26,15 @@ export const getShow = (page = 0) => {
     )},created_at_i<${getUnixTime(now)}`
   ).then(d => d.json());
 };
+
+export const getItems = (type, page = 0) => {
+  const now = new Date();
+
+  const yesterday = subDays(now, 1);
+
+  return fetch(
+    `https://hn.algolia.com/api/v1/search?tags=${type}&page=${page}&numericFilters=created_at_i>${getUnixTime(
+      yesterday
+    )},created_at_i<${getUnixTime(now)}`
+  ).then(d => d.json());
+};

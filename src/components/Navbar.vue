@@ -21,6 +21,9 @@
           <router-link class="navbar-item" @click="toggle" to="/show"
             >Show</router-link
           >
+          <router-link class="navbar-item" @click="toggle" to="/ask"
+            >Ask</router-link
+          >
           <router-link class="navbar-item" @click="toggle" to="/search">
             Search</router-link
           >
@@ -29,13 +32,8 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <a class="button is-small">
-                  <span> Register </span>
-                </a>
-              </p>
-              <p class="control">
                 <a class="button is-small is-info is-outlined">
-                  <span>Login</span>
+                  <span>Code</span>
                 </a>
               </p>
             </div>
