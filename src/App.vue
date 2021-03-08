@@ -8,11 +8,11 @@
 // Set your brand colors
 $vue-green: #3fb984;
 $vue-black: #31475e;
-$purple: #8A4D76;
-$pink: #FA7C91; 
+$purple: #8a4d76;
+$pink: #fa7c91;
 $brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
